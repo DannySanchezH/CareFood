@@ -3,10 +3,30 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
 	xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
 	x:Class="Carefood2.App">
 
 	<!--Application Resources-->
 	<Application.Resources>
+		<Style x:Key="boton" TargetType="Button">
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="BorderBrush" Value="{StaticResource PhoneForegroundBrush}"/>
+			<Setter Property="Foreground" Value="{StaticResource PhoneForegroundBrush}"/>
+			<Setter Property="BorderThickness" Value="{StaticResource PhoneBorderThickness}"/>
+			<Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiBold}"/>
+			<Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMediumLarge}"/>
+			<Setter Property="Padding" Value="10,3,10,5"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid Height="125" Width="204">
+							<Path Data="M17,75 C5.04023,46.0308 -20.0605,22.5 60.5,22.5 C77.093,22.5 94.6113,17.6223 111.5,21 C124.269,23.5538 125,44.6807 125,64.5 C91.6372,77.8451 54.6414,80.5164 17,75 z" Fill="#FF6D6DF5" HorizontalAlignment="Left" Height="82.89" Margin="10,10,0,0" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" VerticalAlignment="Top" Width="170.304" d:IsLocked="True"/>
+							<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Entrar" VerticalAlignment="Top" Margin="58,28,0,0"/>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
 	</Application.Resources>
 
 	<Application.ApplicationLifetimeObjects>
